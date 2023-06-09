@@ -27,7 +27,7 @@ var ilsAudioDigitSpan = (function (jspsych) {
           choices: {
               type: jspsych.ParameterType.STRING,
               pretty_name: "Choices",
-              default: "0123456789".split('').concat(["backspace", "ok"]),
+              default: "1234567890".split('').concat(["backspace", "ok"]),
               array: true,
           },
           /** The HTML for creating button. Can create own style. Use the "%choice%" string to indicate where the label from the choices parameter should be inserted. */
