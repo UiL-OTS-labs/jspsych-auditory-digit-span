@@ -62,6 +62,8 @@ function validateSequence(sequence) {
     // sequences such as [1,2,3] are invalid
     function is_consecutive(seq) {
         let all_consecutive = true;
+        if (seq.length <= 1)
+            return false;
         for (let i = 1; i < seq.length && all_consecutive ; i++) {
             if (seq[i] - seq[i-1] !== 1)
                 all_consecutive = false;
@@ -122,9 +124,9 @@ function generateStimuli(min, max, n_repeats) {
 
     let sequences = []
 
-    for (let i = min; i < max; i++) {
+    for (let i = min; i <= max; i++) {
         let valid_sequences = [];
-        while (valid_sequences.length <= n_repeats) {
+        while (valid_sequences.length < n_repeats) {
             let sequence = randomSequence(i);
             if (validateSequence(sequence)) {
                 valid_sequences.push(sequence);
