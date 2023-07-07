@@ -3,7 +3,7 @@ const MIN_DIGITS = 3;       // The minimum number of numbers in one sequence
 const MAX_DIGITS = 14;      // The maximum number
 const MIN_PRACTICE = 2;     // The minimum number in the practice fase
 const MAX_PRACTICE = 3;     // The maximum number in the practice
-const NUM_REPEATS = 1;      // The number of times a sequence of n items repeats
+const NUM_REPEATS = 2;      // The number of times a sequence of n items repeats
 
 let PRACTICE_LIST = [];
 
