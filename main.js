@@ -59,7 +59,7 @@ let pre_test_screen = {
 let end_screen = {
     type: jsPsychHtmlButtonResponse,
     stimulus: DEBRIEF_MESSAGE,
-    choices: ["Ga verder met deel 3"],
+    choices: ["Ga naar deel 3"],
     trial_duration: DEBRIEF_MESSAGE_DURATION,
     on_finish : function(data) {
         if (typeof data.rt === "number") {
@@ -78,6 +78,7 @@ let practice = {
             stimuli : jsPsych.timelineVariable('stimuli'),
             expected_answer : jsPsych.timelineVariable('answer'),
             isi : ISI,
+            post_trial_gap : 2000,
             prompt : RECALL_PROMPT,
         },
         // feedback
@@ -104,7 +105,8 @@ let digit_test = {
             type : ilsAudioDigitSpan,
             stimuli : jsPsych.timelineVariable('stimuli'),
             expected_answer : jsPsych.timelineVariable("answer"),
-            iss : ISI,
+            isi : ISI,
+            post_trial_gap : 2000,
             prompt : RECALL_PROMPT,
             on_finish : (data) => {
                 if (data.correct === true) {
