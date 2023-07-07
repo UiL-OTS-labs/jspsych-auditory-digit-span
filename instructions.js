@@ -15,7 +15,7 @@ const PRE_PRACTICE_INSTRUCTION =
     "Jouw taak is de cijfers in te klikken in dezelfde "+
     "volgorde en dan op OK te klikken."                 +
     "<br><br>"                                          +
-    "Eerst doen we een oefening."                       +
+    "Eerst doen we een oefening.<br>"                   +
     "<b>Maak alsjeblieft geen aantekeningen!</b><br>"   +
     "Eerst doen we een oefening."                       +
     "<br><br>"                                          +
