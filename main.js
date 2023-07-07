@@ -59,7 +59,7 @@ let pre_test_screen = {
 let end_screen = {
     type: jsPsychHtmlButtonResponse,
     stimulus: DEBRIEF_MESSAGE,
-    choices: [],
+    choices: ["Ga verder met deel 3"],
     trial_duration: DEBRIEF_MESSAGE_DURATION,
     on_finish : function(data) {
         if (typeof data.rt === "number") {
@@ -140,7 +140,7 @@ function initExperiment() {
     timeline.push(instruction_screen_practice);
     
     // test/set audio level (sountest.js)
-    timeline.push(maybe_test_audio);
+    // timeline.push(maybe_test_audio);
     
     timeline.push(practice);
 

@@ -12,9 +12,11 @@ const PRE_PRACTICE_INSTRUCTION =
     "Dit is een geheugen test. Ik presenteer een lijst "+
     "van cijfer via het geluidssysteem"                 +
     "<br><br>"                                          +
-    "Jouw taak is de cijfers in te typen in dezelfde "  +
+    "Jouw taak is de cijfers in te klikken in dezelfde "+
     "volgorde en dan op OK te klikken."                 +
     "<br><br>"                                          +
+    "Eerst doen we een oefening."                       +
+    "<b>Maak alsjeblieft geen aantekeningen!</b><br>"   +
     "Eerst doen we een oefening."                       +
     "<br><br>"                                          +
     "<i>Klik op \"Ga verder\" wanneer je klaar bent om "+
@@ -22,16 +24,13 @@ const PRE_PRACTICE_INSTRUCTION =
     ;
 
 const PRE_TEST_INSTRUCTION =
-    "Einde van de oefening.<br><br>"                 +
-    "<i>Klik op \"Ga verder\" om de taak te beginnen</i>"
-    ;
+    "Einde van de oefening.<br><br>"                        +
+    "<i>Klik op \"Ga verder\" om de taak te beginnen</i>"   ;
 
-const DEBRIEF_MESSAGE = `
-    <h1>Einde van het experiment</h1>
-    <br>
-    <br>
-    <h2>Dank je wel!</h2>
-    `;
+const DEBRIEF_MESSAGE = 
+    "Dit is het einde van het tweede deel van het experiment!" +
+    "<br>Dank je wel voor jouw deelname!";
 
-const RECALL_PROMPT = "<h1>Herhaal in gegeven volgorde</h1>";
+const RECALL_PROMPT = "<h1>Herhaal in GEGEVEN volgorde</h1>";
+
 
