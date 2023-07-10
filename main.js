@@ -19,6 +19,11 @@ let preload_audio = {
     audio : [... getAudioStimuli(), AUDIO_TEST_STIMULUS]
 };
 
+let request_fullscreen = {
+    type : jsPsychFullscreen,
+    fullscreen_mode : true
+};
+
 let maybe_preload_audio = {
     timeline : [preload_audio],
     conditional_function : experimentUsesAudio
@@ -137,6 +142,9 @@ function initExperiment() {
 
 
     let timeline = [];
+
+    // request fullscreen
+    timeline.push(request_fullscreen);
 
     // task instruction (with button)
     timeline.push(instruction_screen_practice);
