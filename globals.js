@@ -1,6 +1,9 @@
 
 // ACCESS_KEY needs to be used for server setup (data store)
-const ACCESS_KEY = '00000000-0000-0000-0000-000000000000'; 
+const ACCESS_KEY = '00000000-0000-0000-0000-000000000000';
+
+// Needs to be updated to the url of the 3rd experiment
+const REDIRECTION_URL= 'http://www.nos.nl'; 
 
 // Default behavior of (sub) trial phases. times are in ms.
 const FEEDBACK_DURATION = 1000;

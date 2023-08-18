@@ -13,6 +13,9 @@ let jsPsych = initJsPsych(
     }
 );
 
+// updated from main using querystring.
+let g_prolific_vars = undefined;
+
 let preload_audio = {
     type : jsPsychPreload,
     message : PRELOAD_MSG,
@@ -70,6 +73,7 @@ let end_screen = {
         if (typeof data.rt === "number") {
             data.rt = Math.round(data.rt);
         }
+        uil.browser.redirect(REDIRECTION_URL, g_prolific_vars);
     },
     on_load : function() {
         uil.saveData(ACCESS_KEY);
@@ -135,10 +139,12 @@ let digit_test = {
 function initExperiment() {
 
     // Data added to the output of all trials.
-    let subject_id = jsPsych.randomization.randomID(8);
-    jsPsych.data.addProperties({
-        subject: subject_id,
-    });
+    g_prolific_vars = {
+        PROLIFIC_PID : jsPsych.data.getURLVariable('PROLIFIC_PID'),
+        STUDY_ID : jsPsych.data.getURLVariable('STUDY_ID'),
+        SESSION_ID : jsPsych.data.getURLVariable('SESSION_ID'),
+    };
+    jsPsych.data.addProperties(g_prolific_vars);
 
 
     let timeline = [];
