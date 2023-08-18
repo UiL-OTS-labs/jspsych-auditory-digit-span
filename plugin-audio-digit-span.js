@@ -138,7 +138,6 @@ var ilsAudioDigitSpan = (function (jspsych) {
           this.jsPsych.pluginAPI
               .getAudioBuffer(stimulus)
               .then(function (buffer) {
-              console.log(myself);
               if (myself.context !== null) {
                   audio = myself.context.createBufferSource();
                   audio.buffer = buffer;
