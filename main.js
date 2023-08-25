@@ -151,6 +151,11 @@ function initExperiment() {
 
     // request fullscreen
     timeline.push(request_fullscreen);
+    
+    // start recording focus from here
+    timeline.push({
+        type : IlsFocusPlugin
+    });
 
     // task instruction (with button)
     timeline.push(instruction_screen_practice);
@@ -163,6 +168,10 @@ function initExperiment() {
     timeline.push(pre_test_screen);
 
     timeline.push(digit_test);
+    
+    timeline.push({
+        type : IlsFocusPlugin
+    });
 
     timeline.push(end_screen);
 
