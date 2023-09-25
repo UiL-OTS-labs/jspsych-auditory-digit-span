@@ -6,10 +6,10 @@
 
 let jsPsych = initJsPsych(
     {
-        exclusions: {
-            min_width: MIN_WIDTH,
-            min_height: MIN_HEIGHT
-        }
+//        exclusions: {
+//            min_width: MIN_WIDTH,
+//            min_height: MIN_HEIGHT
+//        }
     }
 );
 
