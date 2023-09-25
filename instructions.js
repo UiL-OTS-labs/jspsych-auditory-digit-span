@@ -33,7 +33,7 @@ const PRE_TEST_INSTRUCTION =
     "<i>Klik op \"Ga verder\" om de taak te beginnen</i>"   ;
 
 const DEBRIEF_MESSAGE = 
-    "Dit is het einde van het tweede deel van het experiment!" +
+    "Dit is het einde van tweede taak!" +
     "<br>Dank je wel voor jouw deelname!";
 
 const RECALL_PROMPT = "<h1>Herhaal in GEGEVEN volgorde</h1>";
