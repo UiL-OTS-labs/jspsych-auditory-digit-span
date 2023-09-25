@@ -5,17 +5,22 @@
  * utf8 text encoding.
  */
 
+const FULLSCREEN_PROMPT =
+    "Druk op de knop hieronder om naar een volledig scherm te gaan.";
+
+const FULLSCREEN_BUTTON_LABEL = 
+    "Ga naar een volledig scherm.";
+
 const PRE_PRACTICE_INSTRUCTION =
     "<strong>Beste deelnemer,</strong><br><br>"         +
     "Dank je voor het deelnemen in dit experiment."     +
     "<br><br>"                                          +
-    "Dit is een geheugen test. Ik presenteer een lijst "+
-    "van cijfer via het geluidssysteem"                 +
+    "Dit is een geheugentest. Ik presenteer een lijst " +
+    "van cijfers via het geluidssysteem."               +
     "<br><br>"                                          +
     "Jouw taak is de cijfers in te klikken in dezelfde "+
     "volgorde en dan op OK te klikken."                 +
     "<br><br>"                                          +
-    "Eerst doen we een oefening.<br>"                   +
     "<b>Maak alsjeblieft geen aantekeningen!</b><br>"   +
     "Eerst doen we een oefening."                       +
     "<br><br>"                                          +
