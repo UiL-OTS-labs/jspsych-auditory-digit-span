@@ -24,7 +24,9 @@ let preload_audio = {
 
 let request_fullscreen = {
     type : jsPsychFullscreen,
-    fullscreen_mode : true
+    fullscreen_mode : true,
+    message : FULLSCREEN_PROMPT,
+    button_label : FULLSCREEN_BUTTON_LABEL,
 };
 
 let maybe_preload_audio = {
@@ -67,7 +69,7 @@ let pre_test_screen = {
 let end_screen = {
     type: jsPsychHtmlButtonResponse,
     stimulus: DEBRIEF_MESSAGE,
-    choices: ["Ga naar deel 3"],
+    choices: ["Ga naar taak 3"],
     trial_duration: DEBRIEF_MESSAGE_DURATION,
     on_finish : function(data) {
         if (typeof data.rt === "number") {
