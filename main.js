@@ -132,6 +132,7 @@ let digit_test = {
                         jsPsych.endCurrentTimeline();
                     }
                 }
+                data.span = digit_test.span;
             }
         }
     ],
@@ -146,8 +147,9 @@ function initExperiment() {
         STUDY_ID : jsPsych.data.getURLVariable('STUDY_ID'),
         SESSION_ID : jsPsych.data.getURLVariable('SESSION_ID'),
     };
+
     jsPsych.data.addProperties(g_prolific_vars);
-    jsPsych.data.addProperties({task_name : "digit_span"});
+    jsPsych.data.addProperties({task_name:"digit_span"});
 
     let timeline = [];
 
