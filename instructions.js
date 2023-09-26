@@ -6,7 +6,7 @@
  */
 
 const FULLSCREEN_PROMPT =
-    "Druk op de knop hieronder om naar een volledig scherm te gaan.";
+    "<p>Druk op de knop hieronder om naar een volledig scherm te gaan.</p>";
 
 const FULLSCREEN_BUTTON_LABEL = 
     "Ga naar een volledig scherm.";
