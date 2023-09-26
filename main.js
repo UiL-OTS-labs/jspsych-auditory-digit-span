@@ -6,10 +6,10 @@
 
 let jsPsych = initJsPsych(
     {
-        exclusions: {
-            min_width: MIN_WIDTH,
-            min_height: MIN_HEIGHT
-        }
+//        exclusions: {
+//            min_width: MIN_WIDTH,
+//            min_height: MIN_HEIGHT
+//        }
     }
 );
 
@@ -24,7 +24,9 @@ let preload_audio = {
 
 let request_fullscreen = {
     type : jsPsychFullscreen,
-    fullscreen_mode : true
+    fullscreen_mode : true,
+    message : FULLSCREEN_PROMPT,
+    button_label : FULLSCREEN_BUTTON_LABEL,
 };
 
 let maybe_preload_audio = {
@@ -67,7 +69,7 @@ let pre_test_screen = {
 let end_screen = {
     type: jsPsychHtmlButtonResponse,
     stimulus: DEBRIEF_MESSAGE,
-    choices: ["Ga naar deel 3"],
+    choices: ["Ga naar taak 3"],
     trial_duration: DEBRIEF_MESSAGE_DURATION,
     on_finish : function(data) {
         if (typeof data.rt === "number") {
@@ -130,6 +132,7 @@ let digit_test = {
                         jsPsych.endCurrentTimeline();
                     }
                 }
+                data.span = digit_test.span;
             }
         }
     ],
@@ -144,8 +147,9 @@ function initExperiment() {
         STUDY_ID : jsPsych.data.getURLVariable('STUDY_ID'),
         SESSION_ID : jsPsych.data.getURLVariable('SESSION_ID'),
     };
-    jsPsych.data.addProperties(g_prolific_vars);
 
+    jsPsych.data.addProperties(g_prolific_vars);
+    jsPsych.data.addProperties({task_name:"digit_span"});
 
     let timeline = [];
 
